@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tracker</string>
+    <string name="API_KEY">AIzaSyCaSHKiXpVh_fKr8F_2rxyD7fPcW1hJ2QE</string>
+    <!-- Transition type strings -->
+    <string name="geofence_transition_entered">Entered</string>
+    <string name="geofence_transition_exited">Exited</string>
+    <string name="unknown_geofence_transition">Unknown Transition</string>
+
+
+    <string name="geofence_transition_invalid_type">
+        Geofence transition error: invalid transition type %1$d
+    </string>
+    <string name="not_connected">Not Connected</string>
+    <string name="cellphone_hint">Cellphone</string>
+</resources>
