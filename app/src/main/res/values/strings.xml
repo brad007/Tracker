@@ -11,5 +11,8 @@
         Geofence transition error: invalid transition type %1$d
     </string>
     <string name="not_connected">Not Connected</string>
-    <string name="cellphone_hint">Cellphone</string>
+    <string name="cellphone_hint">Cellphone Number</string>
+    <string name="title_activity_email">EmailActivity</string>
+    <string name="send_option_title">Send Your Location Via:</string>
+    <string name="email_hint">Email Address</string>
 </resources>

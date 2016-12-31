@@ -10,6 +10,8 @@ import android.support.v4.app.DialogFragment;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.software.fire.tracker.R;
+import com.software.fire.tracker.ui.activities.EmailActivity;
+import com.software.fire.tracker.ui.activities.SMSActivity;
 import com.software.fire.tracker.utils.Constants;
 
 /**
@@ -35,6 +37,7 @@ public class SendOptionsDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.send_option_title);
         builder.setItems(R.array.send_options, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -46,13 +49,12 @@ public class SendOptionsDialog extends DialogFragment {
                         startActivity(smsIntent);
                         break;
                     case EMAIL_OPTION:
-                        Intent emailIntent = new Intent(getContext(), SMSActivity.class);
+                        Intent emailIntent = new Intent(getContext(), EmailActivity.class);
                         emailIntent.putExtra(Constants.LATITUDE, mSendOptionsManager.getPosition().latitude);
                         emailIntent.putExtra(Constants.LONGITUDE, mSendOptionsManager.getPosition().longitude);
                         startActivity(emailIntent);
                         break;
                 }
-
             }
         });
         return builder.create();
