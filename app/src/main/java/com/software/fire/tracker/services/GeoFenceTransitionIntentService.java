@@ -115,7 +115,7 @@ public class GeoFenceTransitionIntentService extends IntentService {
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
                 .setColor(Color.RED)
                 .setContentTitle(notificationDetails)
-                .setContentText("Click notification to return to app")
+                .setContentText("You've exited the 100m perimeter!")
                 .setContentIntent(notifiationPendingIntent);
 
         builder.setAutoCancel(true);
