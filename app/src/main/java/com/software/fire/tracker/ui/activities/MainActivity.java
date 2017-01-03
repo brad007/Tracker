@@ -58,9 +58,6 @@ public class MainActivity extends AppCompatActivity implements
     private static final int REQUEST_CHECK_SETTINGS = 1;
     public static final long UPDATE_INERVAL_IN_MILLISECONDS = 10000;
     public static final long FASTEST_UPDATE_INTERVAL_IN_MILLISECONDS = UPDATE_INERVAL_IN_MILLISECONDS / 2;
-    private static final String KEY_REQUESTING_LOCATION_UPDATES = "requesting-location-updates";
-    private static final String KEY_LOCATION = "location";
-    private static final String KEY_LAST_UPDATED_TIME_STRING = "last-updated-time-string";
     private static final int RC_FINE_LOCATION_PERMISSION = 2;
     private static final double RADIUS = 100;
     private static final String GEOFENCE_ID = "geofence";
@@ -70,11 +67,9 @@ public class MainActivity extends AppCompatActivity implements
     private LocationSettingsRequest mLocationSettingRequest;
     private Location mCurrentLocation;
     private Boolean mRequestingLocationUpdates;
-    private String mLastUpdateTime;
 
     private GoogleMap mMap;
     private boolean mMapReady;
-    private boolean mInitialLocationSet;
     private Marker mMarker;
     private boolean mMapInitialPositionSet = false;
     private boolean mGeofenceSet;
